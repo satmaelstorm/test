@@ -23,9 +23,11 @@ for($i = 0; $i < NUM; $i++) {
 
 $matrix = new SplFixedArray(NUM);
 $i = 0;
+$timeStart = microtime(true);
 array_map(function ($value) use ($matrix, &$i) {
     $matrix[$i] = typeCast($value, 'float');
     $i++;
 }, $arr);
 
+echo microtime(true) - $timeStart;
 ?>
