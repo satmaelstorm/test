@@ -30,7 +30,7 @@ $timeStart = microtime(true);
 for ($i = 0; $i < SEARCH_SEQUENCE_LENGTH; $i++) {
     $r = mt_rand(0, MAX_RAND);
     if ($index->search($r)) {
-        isset($results[$i]) ? $results[$i]++ : $results[$i] = 1;
+        isset($results[$r]) ? $results[$r]++ : $results[$r] = 1;
     }
 }
 
