@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-define("INDEX_LEN", 10000);
-define("SEARCH_SEQUENCE_LENGTH", 100000);
-define("MAX_RAND", 1000000);
+const INDEX_LEN = 10000;
+const SEARCH_SEQUENCE_LENGTH = 100000;
+const MAX_RAND = 1000000;
 
 class Index {
-    private $index = [];
+    private array $index = [];
 
     public function __construct(int $len)
     {
