@@ -2,11 +2,11 @@
 declare(strict_types=1);
 
 // table accounts
-// | user_id | amount | currency |
-// | 123     | 10000  | rub      |
-// | 456     | 10000  | bonus    |
-// | 123     | 10000  | bonus    |
-// | 789     | 43535  | rub      | 
+// |id | user_id | amount | currency |
+// |1 | 123      | 10000  | rub      |
+// |2 | 456      | 10000  | bonus    |
+// |3 | 123      | 10000  | bonus    |
+// |4 | 789      | 43535  | rub      | 
 
 class MoneyTransfer {
 
