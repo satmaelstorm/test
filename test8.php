@@ -66,6 +66,13 @@ class Container2 extends BaseContainer
 
 }
 
+class Container3 extends BaseContainer
+{
+    use ValidatorTrait;
+}
+
+// И таких классов-контейнеров может быть очень много. Какие-то с валидацией, какие-то без.
+
 class Renderer extends ContainerRenderer
 {
     protected array $containers;
@@ -96,7 +103,7 @@ function test(): void
     $r1 = new Renderer(
         new Container1([0, 1, 2, 3]),
         new Container2([null, 3, 4, 5]),
-        new Container1([5, 6, 7]),
+        new Container3([5, 6, 7]),
     );
 
     $assert = $r1->renderContainer() === "[0,1,2,3,4,5,6,7]";
